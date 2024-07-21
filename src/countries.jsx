@@ -26,7 +26,7 @@ function Countries() {
 const [country, setcountry] = useState([])
 console.log(country);
 useEffect(() => {
-    fetch(API_URL).then(res => res.json()).then(data => {setcountry(data)}).catch(error => console.error("error :", error));
+    fetch(API_URL).then(res => res.json()).then(data => {setcountry(data)}).catch(error => console.error("Error fetching data: ", error));
 },[])
     return (
     <div style={{
